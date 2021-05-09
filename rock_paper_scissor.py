@@ -23,18 +23,10 @@ while True:
     if computer == player_choise:
         print("Match is Draw")
         continue
-    if computer == "ROCK" and player_choise == "PAPER":
+    if (computer == "ROCK" and player_choise == "PAPER") or (computer == "PAPER" and player_choise == "SCISSOR") or (computer == "SCISSOR" and player_choise == "ROCK"):
         flag = 1
-    if computer == "ROCK" and player_choise == "SCISSOR":
+    if (computer == "ROCK" and player_choise == "SCISSOR") or (computer == "SCISSOR" and player_choise == "PAPER") or (computer == "PAPER" and player_choise == "ROCK"):
         flag = 0
-    if computer == "SCISSOR" and player_choise == "PAPER":
-        flag = 0
-    if computer == "SCISSOR" and player_choise == "ROCK":
-        flag = 1
-    if computer == "PAPER" and player_choise == "ROCK":
-        flag = 0
-    if computer == "PAPER" and player_choise == "SCISSOR":
-        flag = 1
     
     if flag == 1:
         print(name,"is WINNER")
